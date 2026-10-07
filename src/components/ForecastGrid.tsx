@@ -38,7 +38,7 @@ const MetricRing = ({
   const dashOffset = CIRCUMFERENCE - (progress / 100) * CIRCUMFERENCE;
 
   return (
-    <div className="rounded-[28px] border border-white/10 bg-white/6 p-4 text-center backdrop-blur-xl">
+    <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-4 text-center">
       <p className="text-[11px] uppercase tracking-[0.24em] text-sky-100/45">{label}</p>
       <div className="relative mx-auto mt-3 h-[88px] w-[88px]">
         <svg className="h-full w-full -rotate-90" viewBox={`0 0 ${RING_SIZE} ${RING_SIZE}`}>
@@ -90,7 +90,7 @@ const ForecastGrid: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.07] shadow-[0_18px_70px_rgba(4,10,24,0.22)] backdrop-blur-xl"
+        className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.07] shadow-[0_18px_70px_rgba(4,10,24,0.22)] backdrop-blur-md"
       >
         <div className="border-b border-white/10 px-5 py-4 sm:px-6">
           <p className="text-[11px] uppercase tracking-[0.3em] text-sky-100/45">Forecast</p>
@@ -180,7 +180,7 @@ const ForecastGrid: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.12 }}
-        className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.07] shadow-[0_18px_70px_rgba(4,10,24,0.22)] backdrop-blur-xl"
+        className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.07] shadow-[0_18px_70px_rgba(4,10,24,0.22)] backdrop-blur-md"
       >
         <div className="border-b border-white/10 px-5 py-4 sm:px-6">
           <p className="text-[11px] uppercase tracking-[0.3em] text-sky-100/45">Day details</p>

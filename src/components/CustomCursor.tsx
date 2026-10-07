@@ -43,29 +43,35 @@ const CustomCursor: React.FC = () => {
     };
   }, [mouseX, mouseY]);
 
+  if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
+    return null;
+  }
+
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-3 h-3 bg-green-400 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 w-3 h-3 bg-green-400 rounded-full pointer-events-none z-[9999] shadow-[0_0_10px_rgba(74,222,128,0.7)]"
         style={{
           x: cursorX,
           y: cursorY,
           translateX: '-50%',
           translateY: '-50%',
           scale: isHovering ? 2.5 : 1,
+          willChange: 'transform',
         }}
         animate={{
           backgroundColor: isHovering ? 'rgba(74, 222, 128, 0.4)' : '#4ade80',
         }}
       />
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-green-400/30 rounded-full pointer-events-none z-[9998] mix-blend-difference"
+        className="fixed top-0 left-0 w-8 h-8 border border-green-400/40 rounded-full pointer-events-none z-[9998] shadow-[0_0_15px_rgba(74,222,128,0.2)]"
         style={{
           x: trailX,
           y: trailY,
           translateX: '-50%',
           translateY: '-50%',
           scale: isHovering ? 1.5 : 1,
+          willChange: 'transform',
         }}
       />
     </>

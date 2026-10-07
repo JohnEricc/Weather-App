@@ -42,7 +42,7 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <section className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.07] shadow-[0_18px_70px_rgba(4,10,24,0.22)] backdrop-blur-xl">
+    <section className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.07] shadow-[0_18px_70px_rgba(4,10,24,0.22)] backdrop-blur-md">
       <div className="bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent)] p-4 sm:p-5">
         <div className="mb-4 flex items-center justify-between gap-3">
           <div>

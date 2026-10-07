@@ -60,7 +60,7 @@ const WeatherCard: React.FC = () => {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.07] shadow-[0_22px_90px_rgba(4,10,24,0.26)] backdrop-blur-xl"
+      className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.07] shadow-[0_22px_90px_rgba(4,10,24,0.26)] backdrop-blur-md"
     >
       <div className="relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.22),transparent_22%),radial-gradient(circle_at_78%_22%,rgba(242,187,120,0.18),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_55%)]" />
@@ -103,7 +103,7 @@ const WeatherCard: React.FC = () => {
               </div>
 
               <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-                <div className="rounded-[22px] border border-white/10 bg-black/10 p-4 backdrop-blur-md">
+                <div className="rounded-[22px] border border-white/10 bg-black/25 p-4">
                   <div className="flex items-center gap-3">
                     <Droplets className="h-5 w-5 text-sky-100/80" />
                     <div>
@@ -112,7 +112,7 @@ const WeatherCard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-[22px] border border-white/10 bg-black/10 p-4 backdrop-blur-md">
+                <div className="rounded-[22px] border border-white/10 bg-black/25 p-4">
                   <div className="flex items-center gap-3">
                     <Wind className="h-5 w-5 text-sky-100/80" />
                     <div>
@@ -121,7 +121,7 @@ const WeatherCard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-[22px] border border-white/10 bg-black/10 p-4 backdrop-blur-md">
+                <div className="rounded-[22px] border border-white/10 bg-black/25 p-4">
                   <div className="flex items-center gap-3">
                     <Gauge className="h-5 w-5 text-sky-100/80" />
                     <div>
@@ -130,7 +130,7 @@ const WeatherCard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-[22px] border border-white/10 bg-black/10 p-4 backdrop-blur-md">
+                <div className="rounded-[22px] border border-white/10 bg-black/25 p-4">
                   <div className="flex items-center gap-3">
                     <Sunrise className="h-5 w-5 text-sky-100/80" />
                     <div>
@@ -169,11 +169,11 @@ const WeatherCard: React.FC = () => {
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
-              <div className="rounded-[24px] border border-white/10 bg-white/[0.05] p-4 backdrop-blur-lg">
+              <div className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-sky-100/45">Sunrise</p>
                 <p className="mt-3 text-2xl font-light text-white">{formatTime(current.sunrise)}</p>
               </div>
-              <div className="rounded-[24px] border border-white/10 bg-white/[0.05] p-4 backdrop-blur-lg">
+              <div className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-sky-100/45">Sunset</p>
                 <p className="mt-3 text-2xl font-light text-white">{formatTime(current.sunset)}</p>
               </div>
